@@ -12,7 +12,6 @@ from source.core.dto import Task, ParseResult
 logger = logging.getLogger("redis_worker")
 logger.setLevel(logging.INFO)
 
-bot = Bot(token=settings.TG_BOT_TOKEN)
 parsers = {"vkusvill": VkusvillParser(), "kuper": KuperParser()}
 
 async def initialize_proxies(r: redis.Redis):
